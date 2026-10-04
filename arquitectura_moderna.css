@@ -1,0 +1,79 @@
+/* ===== Variables de color ===== */
+:root {
+  --fondo: #e9e9e6;      /* fondo general gris concreto */
+  --tinta: #1a1a1a;      /* color del texto */
+  --blanco: #ffffff;     /* fondo de tarjetas */
+  --naranja: #ff4d00;    /* color de acento */
+  --suave: #5c5c5c;      /* texto secundario */
+}
+/* ===== Reinicio básico de márgenes ===== */
+* {
+  box-sizing: border-box; /* el padding no agranda los elementos */
+  margin: 0;
+  padding: 0;
+}
+/* ===== Estilo general del cuerpo ===== */
+body { font-family: Verdana, Geneva, sans-serif; background: var(--fondo); color: var(--tinta); line-height: 1.5; }
+/* ===== Encabezado ===== */
+.encabezado { background: var(--tinta); color: var(--blanco); padding: 44px 20px; text-align: center; }
+.encabezado h1 { font-family: Georgia, serif; font-size: 2.7rem; margin-bottom: 8px; }
+/* ===== Contenedor central ===== */
+main { max-width: 1050px; margin: 0 auto; padding: 30px 20px 50px; }
+/* ===== Galería en cuadrícula (se adapta al ancho) ===== */
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+/* ===== Tarjeta de edificio (esquinas rectas, borde grueso) ===== */
+.tarjeta {
+  background: var(--blanco);
+  border: 3px solid var(--tinta);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Tarjeta con me gusta (la clase la agrega JavaScript) */
+.tarjeta.favorita { border-color: var(--naranja); }
+/* ===== Zona de imagen ===== */
+/* El emoji se centra con flexbox */
+/* El alto es fijo para que las tres sean iguales */
+.foto {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+}
+/* Cada edificio tiene su propio degradado de fondo */
+.tarjeta[data-id="torre"] .foto { background: linear-gradient(160deg, #8fd3f4, #3b6fb6); }
+.tarjeta[data-id="centro"] .foto { background: linear-gradient(160deg, #e9d8a6, #b08968); }
+.tarjeta[data-id="casa"] .foto { background: linear-gradient(160deg, #b7c4b0, #4f6f52); }
+/* ===== Textos de la tarjeta ===== */
+.tarjeta h2 { font-family: Georgia, serif; }
+.dato { color: var(--naranja); font-weight: bold; font-size: 0.85rem; }
+.tarjeta p { color: var(--suave); flex: 1; }
+/* ===== Campo de nota ===== */
+input {
+  padding: 10px 12px;
+  border: 2px solid var(--tinta);
+  font-size: 0.95rem;
+  width: 100%;
+}
+/* ===== Botones ===== */
+button {
+  padding: 12px;
+  border: 2px solid var(--tinta);
+  background: var(--tinta);
+  color: var(--blanco);
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover { opacity: 0.85; }
+/* Botón de un edificio que ya te gusta */
+.tarjeta.favorita .btn-gusta { background: var(--naranja); border-color: var(--naranja); }
+/* Borde visible al navegar con el teclado */
+input:focus-visible, button:focus-visible { outline: 3px solid var(--naranja); }
+/* ===== Panel de instrucciones ===== */
+.instrucciones { margin: 0 0 30px; }
+.instrucciones ol { padding-left: 20px; color: var(--suave); }
+/* ===== Resumen ===== */
+.resumen { margin-top: 36px; background: var(--blanco); border: 3px solid var(--tinta); padding: 24px; }
+.resumen p { margin: 10px 0 14px; color: var(--suave); }

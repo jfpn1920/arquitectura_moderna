@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arquitectura moderna</title>
+    <link rel="stylesheet" href="arquitectura_moderna.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="arquitectura_moderna.js" defer></script>
+</head>
+<body>
+    <!----------------------------------------->
+    <!--|estructuracion_arquitectura_moderna|-->
+    <!----------------------------------------->
+    <header class="encabezado">
+        <h1>Arquitectura Moderna</h1>
+        <p>Una galería de tres edificios: marca tus favoritos y escribe una nota.</p>
+    </header>
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Panel con las instrucciones de uso -->
+        <section class="resumen instrucciones">
+            <!-- Título del panel -->
+            <h2>Cómo usar la galería</h2>
+            <!-- Lista numerada con los pasos -->
+            <ol>
+                <!-- Paso 1 -->
+                <li>Mira los tres edificios de la galería.</li>
+                <!-- Paso 2 -->
+                <li>Escribe una nota en la tarjeta que quieras.</li>
+                <!-- Paso 3 -->
+                <li>Pulsa "Me gusta" para marcar tus favoritos.</li>
+            </ol>
+        </section>
+        <!-- Fin de las instrucciones -->
+        <!-- Galería con las tres tarjetas (data-id identifica cada edificio en JS) -->
+        <section class="galeria">
+            <!-- Edificio 1: Torre de Cristal -->
+            <article class="tarjeta" data-id="torre">
+                <!-- Zona de imagen: emoji sobre un fondo de color -->
+                <div class="foto">🏢</div>
+                <h2>Torre de Cristal</h2>
+                <!-- Tipo y año del edificio -->
+                <span class="dato">Rascacielos · 2021</span>
+                <p>Fachada de vidrio que refleja el cielo de la ciudad.</p>
+                <!-- Campo para escribir una nota personal -->
+                <input type="text" class="nota" placeholder="Escribe una nota..." maxlength="60">
+                <!-- Botón de me gusta -->
+                <button class="btn-gusta">Me gusta</button>
+            </article>
+            <!-- Edificio 2: Centro Cultural -->
+            <article class="tarjeta" data-id="centro">
+                <!-- Zona de imagen: emoji sobre un fondo de color -->
+                <div class="foto">🏛️</div>
+                <h2>Centro Cultural</h2>
+                <!-- Tipo y año del edificio -->
+                <span class="dato">Museo · 2018</span>
+                <p>Grandes columnas y espacios abiertos llenos de luz natural.</p>
+                <!-- Campo para escribir una nota personal -->
+                <input type="text" class="nota" placeholder="Escribe una nota..." maxlength="60">
+                <!-- Botón de me gusta -->
+                <button class="btn-gusta">Me gusta</button>
+            </article>
+            <!-- Edificio 3: Casa Minimalista -->
+            <article class="tarjeta" data-id="casa">
+                <!-- Zona de imagen: emoji sobre un fondo de color -->
+                <div class="foto">🏠</div>
+                <h2>Casa Minimalista</h2>
+                <!-- Tipo y año del edificio -->
+                <span class="dato">Vivienda · 2023</span>
+                <p>Líneas rectas, concreto y ventanales hacia el jardín.</p>
+                <!-- Campo para escribir una nota personal -->
+                <input type="text" class="nota" placeholder="Escribe una nota..." maxlength="60">
+                <!-- Botón de me gusta -->
+                <button class="btn-gusta">Me gusta</button>
+            </article>
+        </section>
+        <!-- Resumen de los edificios favoritos -->
+        <section class="resumen">
+            <h2>Tus favoritos</h2>
+            <!-- Aquí JavaScript escribe el resumen -->
+            <p id="textoResumen"></p>
+            <!-- Botón que borra todos los datos guardados -->
+            <button id="btnReiniciar">Reiniciar todo</button>
+        </section>
+    </main>
+</body>
+</html>
