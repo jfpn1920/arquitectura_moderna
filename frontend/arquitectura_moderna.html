@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arquitectura moderna</title>
+    <link rel="stylesheet" href="arquitectura_moderna.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="arquitectura_moderna.js" defer></script>
+</head>
+<body>
+    <!----------------------------------------->
+    <!--|estructuracion_arquitectura_moderna|-->
+    <!----------------------------------------->
+    <header class="encabezado">
+        <h1>Arquitectura Moderna</h1>
+        <p>Una galería de tres edificios: marca tus favoritos y escribe una nota.</p>
+    </header>
+    <main>
+        <section class="resumen instrucciones">
+            <h2>¿Cómo funciona?</h2>
+            <p>Explora los edificios, marca los que te gusten y escribe una nota personal.</p>
+            <p>Tus favoritos y notas se guardan automáticamente en este navegador.</p>
+        </section>
+        <!-------------------------->
+        <!--|galeria_de_edificios|-->
+        <!-------------------------->
+        <section class="galeria">
+            <article class="tarjeta" data-id="torre">
+                <div class="foto">🏙️</div>
+                <h2>Torre moderna</h2>
+                <p class="dato">Edificio urbano</p>
+                <p>Una torre de diseño contemporáneo con líneas limpias y grandes ventanales.</p>
+                <input
+                    class="nota"
+                    type="text"
+                    maxlength="60"
+                    placeholder="Escribe una nota..."
+                    aria-label="Nota sobre la torre moderna"
+                >
+                <button class="btn-gusta" type="button">♡ Me gusta</button>
+            </article>
+            <article class="tarjeta" data-id="centro">
+                <div class="foto">🏛️</div>
+                <h2>Centro cultural</h2>
+                <p class="dato">Espacio público</p>
+                <p>Un espacio arquitectónico pensado para el encuentro, el arte y la cultura.</p>
+                <input
+                    class="nota"
+                    type="text"
+                    maxlength="60"
+                    placeholder="Escribe una nota..."
+                    aria-label="Nota sobre el centro cultural"
+                >
+                <button class="btn-gusta" type="button">♡ Me gusta</button>
+            </article>
+            <article class="tarjeta" data-id="casa">
+                <div class="foto">🏡</div>
+                <h2>Casa minimalista</h2>
+                <p class="dato">Vivienda moderna</p>
+                <p>Una vivienda que combina formas sencillas, iluminación natural y funcionalidad.</p>
+                <input
+                    class="nota"
+                    type="text"
+                    maxlength="60"
+                    placeholder="Escribe una nota..."
+                    aria-label="Nota sobre la casa minimalista"
+                >
+                <button class="btn-gusta" type="button">♡ Me gusta</button>
+            </article>
+        </section>
+        <!-------------------------->
+        <!--|resumen_de_favoritos|-->
+        <!-------------------------->
+        <section class="resumen">
+            <h2>Mis favoritos</h2>
+            <p id="textoResumen"></p>
+            <button id="btnReiniciar" type="button">Reiniciar todo</button>
+        </section>
+    </main>
+</body>
+</html>
